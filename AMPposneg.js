@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://rawcdn.githack.com/mikivezzoli/AMP/9c09a10ff0695e49e815399d768056f9437c2519/AMP.js'], function(APIConstructor, ampExtension){
+define(['pipAPI', 'https://rawcdn.githack.com/mikivezzoli/AMP/7d01cae7c9cc34fb6c7dc070ae74ededef7c1dbf/AMP.js'], function(APIConstructor, ampExtension){
 
 	var API = new APIConstructor();
 	
