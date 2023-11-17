@@ -140,7 +140,7 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			responses : 2, //Change to 7 for a 1-7 rating
 	        // When using 7 response options, 
 	        // we will Extremely unpleasant, Moderately unpleasant, Slightly unpleasant, neutral, Slightly pleasant, Moderately pleasant, Extremely pleasant.
-		    targetCat : 'Chinese symbol', //The name of the targets (used in the instructions)
+		    targetCat : 'ideogrammi cinesi', //The name of the targets (used in the instructions)
 			
 			//For the example block (often practice)
 			exampleBlock_fixationDuration : -1, 
@@ -150,45 +150,47 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			
 			//Instructions text for the 2-responses version.
 			exampleBlockInst: '<div><p style="font-size:20px; text-align:left; margin-left:10px; font-family:arial"><color="000000"><br/>' + 
-			'Press the key <B>rightKey</B> if the targetCat is more rightAttribute than average. ' + 
-			'Hit the <b>leftKey</b> key if it is more leftAttribute than average.<br/><br/>' + 
-			'The items appear and disappear quickly.  ' + 
-			'Remember to ignore the item that appears before the targetCat and evaluate only the targetCat.<br/><br/></p>'  + 
+			'Nel compito che stai per svolgere ti verranno presentate velocemente delle coppie di immagini, una dopo l’altra. '+
+			'In ogni coppia, la prima immagine sarà una fotografia, la seconda sarà un carattere cinese. '+
+			'La fotografia presentata inizialmente serve semplicemente come stimolo di avviso per il carattere cinese e per il resto va ignorata. '+
+			'Il tuo compito è indicare il significato dell'ideogramma cinese. '+
+			'Premi il tasto <B>rightKey</B> della tastiera se l'targetCat è più rightAttribute della media. ' + 
+			'Premi il tasto <b>leftKey</b> della tastiera se è più leftAttribute della media.<br/><br/>' + 
+			'Le fotografie appaiono e scompaiono rapidamente.  ' + 
+			'Le fotografie possono a volte distorcere i giudizi sugli ideogrammi. Dato che siamo interessati alla capacità di evitare queste distorsioni, cerca di fare del tuo meglio per far sì che le fotografie non distorcano i tuoi giudizi sugli ideogrammi!'+
+			'Da’ una valutazione onesta dei caratteri cinesi, a prescindere dalle fotografie che li precedono. <br/><br/></p>'  + 
 			'<p style="font-size:16px; text-align:center; font-family:arial"><color="000000"><br/><br/>' + 
-			'When you are ready to try a few practice responses, hit the <b>space bar</b>.</p>' + 
+			'Premi la <b>barra spaziatrice</b> per fare delle prove.</p>' + 
 			'<p style="font-size:12px; text-align:center; font-family:arial">' + 
 			'<color="000000">[Round 1 of nBlocks]</p></div>',
 			firstBlockInst : '<div><p style="font-size:20px; text-align:left; margin-left:10px; font-family:arial"><color="000000"><br/>' + 
-			"See how fast it is? Don't worry if you miss some. " + 
-			'Go with your gut feelings.<br/><br/>' + 
-			'Concentrate on each targetCat and rate it as more rightAttribute than the average targetCat with the <b>rightKey</b> key, ' + 
-			'or more leftAttribute than average with the <b>leftKey</b> key.<br/><br/>' + 
-			'Evaluate each targetCat and not the item that appears before it. ' + 
-			'Those items are sometimes distracting.<br/><br/>' + 
+			"Visto quanto è veloce? Non preoccuparti se te ne sfugge qualcuno." + 
+			'Segui il tuo istinto.<br/><br/>' + 
+			'Concentrati su ogni targetCat. Se ti sembra rightAttribute premi il tasto <b>rightKey</b>, ' + 
+			'Se invece ti sembra leftAttribute premi il tasto <b>leftKey</b>.<br/><br/>' + 
+			'Ri corda di valutare l'targetCat e non l'immagine che lo precede. <br/><br/>' + 
 			'<p style="font-size:16px; text-align:center; font-family:arial"><color="000000"><br/><br/>' + 
-			'Ready? Hit the <b>space bar</b>.</p>' + 
+			'Iniziamo? Premi la <b>barra spaziatrice</b>.</p>' + 
 			'<p style="font-size:12px; text-align:center; font-family:arial">' + 
 			'<color="000000">[Round 2 of nBlocks]</p></div>',
 			middleBlockInst : '<div><p style="font-size:20px; text-align:left; margin-left:10px; font-family:arial"><color="000000"><br/>' + 
-			'Continue to another round of this task. ' + 
-			'The rules are exactly the same:<br/><br/>' + 
-			'Concentrate on the targetCat and rate it as more rightAttribute than average with the <b>rightKey</b> key, ' + 
-			'or more leftAttribute than average with the <b>leftKey</b> key.<br/><br/>' + 
-			'Evaluate each targetCat and not the item that appears before it. ' + 
-			'Those items are sometimes distracting. Go with your gut feelings.<br/><br/>' + 
+			'Ti chiediamo di fare ancora lo stesso compito.' + 
+			'Le regole sono  le stesse:<br/><br/>' + 
+			'Concentrati sull'targetCat e indica se è rightAttribute con il tasto <b>rightKey</b> key, ' + 
+			'o se è leftAttribute con il tasto. <b>leftKey</b>.<br/><br/>' + 
+			'Valuta targetCat e non le immagini che lo precedono. ' +
 			'<p style="font-size:16px; text-align:center; font-family:arial"><color="000000"><br/><br/>' + 
-			'Ready? Hit the <b>space bar</b>.</p>' + 
+			'Premi la <b>barra spaziatrice</b> per ricominciare.</p>' + 
 			'<p style="font-size:12px; text-align:center; font-family:arial">' + 
 			'<color="000000">[Round blockNum of nBlocks]</p></div>',
 			lastBlockInst : '<div><p style="font-size:20px; text-align:left; margin-left:10px; font-family:arial"><color="000000"><br/>' + 
-			'Ready for the FINAL round? ' + 
-			'The rules are exactly the same:<br/><br/>' + 
-			'Concentrate on the targetCat and rate it as more rightAttribute than average with the <b>rightKey</b> key, ' + 
-			'or more leftAttribute than average with the <b>leftKey</b> key.<br/><br/>' + 
-			'Evaluate each targetCat and not the item that appears before it. ' + 
-			'Those items are sometimes distracting. Go with your gut feelings.<br/><br/>' + 
+			'Ti chiediamo di fare lo stesso compito un'ultima volta. ' + 
+			'Le regole sono  le stesse:<br/><br/>' + 
+			'Concentrati sull'targetCat e indica se è rightAttribute con il tasto <b>rightKey</b> key, ' + 
+			'o se è leftAttribute con il tasto. <b>leftKey</b>.<br/><br/>' + 
+			'Valuta targetCat e non le immagini che lo precedono. ' +
 			'<p style="font-size:16px; text-align:center; font-family:arial"><color="000000"><br/><br/>' + 
-			'Ready? Hit the <b>space bar</b>.</p>' + 
+			'Premi la <b>barra spaziatrice</b> per ricominciare.</p>' +
 			'<p style="font-size:12px; text-align:center; font-family:arial">' + 
 			'<color="000000">[Round blockNum of nBlocks]</p></div>',
 
