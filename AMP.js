@@ -150,14 +150,14 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			
 			//Instructions text for the 2-responses version.
 			exampleBlockInst: '<div><p style="font-size:20px; text-align:left; margin-left:10px; font-family:arial"><color="000000"><br/>' + 
-			'Nel compito che stai per svolgere ti verranno presentate velocemente delle coppie di immagini, una dopo l’altra. '+
-			'In ogni coppia, la prima immagine sarà una fotografia, la seconda sarà un carattere cinese. '+
-			'La fotografia presentata inizialmente serve semplicemente come stimolo di avviso per il carattere cinese e per il resto va ignorata. '+
-			'Il tuo compito è indicare il significato dell'ideogramma cinese. '+
-			'Premi il tasto <B>rightKey</B> della tastiera se l'targetCat è più rightAttribute della media. ' + 
+			'Nel compito che stai per svolgere ti verranno presentate velocemente delle coppie di immagini, una dopo l’altra. <br/><br/>'+
+			'In ogni coppia, la prima immagine sarà una fotografia, la seconda sarà un carattere cinese. <br/><br/>'+
+			'La fotografia presentata inizialmente serve semplicemente come stimolo di avviso per il carattere cinese e per il resto va ignorata. <br/><br/>'+
+			'Il tuo compito è indicare il significato dell'ideogramma cinese. <br/><br/>'+
+			'Premi il tasto <B>rightKey</B> della tastiera se l'targetCat è più rightAttribute della media. <br/><br/>' + 
 			'Premi il tasto <b>leftKey</b> della tastiera se è più leftAttribute della media.<br/><br/>' + 
 			'Le fotografie appaiono e scompaiono rapidamente.  ' + 
-			'Le fotografie possono a volte distorcere i giudizi sugli ideogrammi. Dato che siamo interessati alla capacità di evitare queste distorsioni, cerca di fare del tuo meglio per far sì che le fotografie non distorcano i tuoi giudizi sugli ideogrammi!'+
+			'Le fotografie possono a volte distorcere i giudizi sugli ideogrammi. Dato che siamo interessati alla capacità di evitare queste distorsioni, cerca di fare del tuo meglio per far sì che le fotografie non distorcano i tuoi giudizi sugli ideogrammi!<br/><br/>'+
 			'Da’ una valutazione onesta dei caratteri cinesi, a prescindere dalle fotografie che li precedono. <br/><br/></p>'  + 
 			'<p style="font-size:16px; text-align:center; font-family:arial"><color="000000"><br/><br/>' + 
 			'Premi la <b>barra spaziatrice</b> per fare delle prove.</p>' + 
@@ -174,21 +174,21 @@ define(['pipAPI','underscore'], function(APIConstructor, _) {
 			'<p style="font-size:12px; text-align:center; font-family:arial">' + 
 			'<color="000000">[Round 2 of nBlocks]</p></div>',
 			middleBlockInst : '<div><p style="font-size:20px; text-align:left; margin-left:10px; font-family:arial"><color="000000"><br/>' + 
-			'Ti chiediamo di fare ancora lo stesso compito.' + 
+			'Ti chiediamo di fare ancora lo stesso compito<br/><br/>.' + 
 			'Le regole sono  le stesse:<br/><br/>' + 
 			'Concentrati sull'targetCat e indica se è rightAttribute con il tasto <b>rightKey</b> key, ' + 
 			'o se è leftAttribute con il tasto. <b>leftKey</b>.<br/><br/>' + 
-			'Valuta targetCat e non le immagini che lo precedono. ' +
+			'Valuta targetCat e non le immagini che lo precedono. <br/><br/>' +
 			'<p style="font-size:16px; text-align:center; font-family:arial"><color="000000"><br/><br/>' + 
 			'Premi la <b>barra spaziatrice</b> per ricominciare.</p>' + 
 			'<p style="font-size:12px; text-align:center; font-family:arial">' + 
 			'<color="000000">[Round blockNum of nBlocks]</p></div>',
 			lastBlockInst : '<div><p style="font-size:20px; text-align:left; margin-left:10px; font-family:arial"><color="000000"><br/>' + 
-			'Ti chiediamo di fare lo stesso compito un'ultima volta. ' + 
+			'Ti chiediamo di fare lo stesso compito un'ultima volta. <br/><br/>' + 
 			'Le regole sono  le stesse:<br/><br/>' + 
 			'Concentrati sull'targetCat e indica se è rightAttribute con il tasto <b>rightKey</b> key, ' + 
 			'o se è leftAttribute con il tasto. <b>leftKey</b>.<br/><br/>' + 
-			'Valuta targetCat e non le immagini che lo precedono. ' +
+			'Valuta targetCat e non le immagini che lo precedono. <br/><br/>' +
 			'<p style="font-size:16px; text-align:center; font-family:arial"><color="000000"><br/><br/>' + 
 			'Premi la <b>barra spaziatrice</b> per ricominciare.</p>' +
 			'<p style="font-size:12px; text-align:center; font-family:arial">' + 
