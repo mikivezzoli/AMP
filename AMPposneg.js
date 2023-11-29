@@ -6,8 +6,8 @@ define(['pipAPI', 'https://rawcdn.githack.com/mikivezzoli/AMP/92c5fcda605109ad13
 	return ampExtension({
 		primeCats :  [
 			{
-				nameForFeedback : 'Black people',  //Will be used in the user feedback 
-				nameForLogging : 'Black people', //Will be used in the logging
+				nameForFeedback : 'Positive',  //Will be used in the user feedback 
+				nameForLogging : 'Positive', //Will be used in the logging
 				//An array of all media objects for this category.
 				mediaArray : [
 				    {word : 'amore'}, 
@@ -17,8 +17,8 @@ define(['pipAPI', 'https://rawcdn.githack.com/mikivezzoli/AMP/92c5fcda605109ad13
 
 			}, 
 			{
-				nameForFeedback : 'White people',  //Will be used in the user feedback 
-				nameForLogging : 'White people', //Will be used in the logging
+				nameForFeedback : 'Negative',  //Will be used in the user feedback 
+				nameForLogging : 'Negative', //Will be used in the logging
 				//An array of all media objects for this category.
 				mediaArray : [
 				    {word : 'odio'}, 
